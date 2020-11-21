@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Starymao 寵愛有家</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/homepage">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/adoption">領養</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/store">商城</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/cart">購物車</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/social_media">社群</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/straymao/membership">會員</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <% if(sess.admin){ %>
+                    <li class="nav-item active">
+                        <a class="nav-link"><%= sess.admin.nickname %></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/address-book/logout">登出</a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/address-book/login">登入</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
